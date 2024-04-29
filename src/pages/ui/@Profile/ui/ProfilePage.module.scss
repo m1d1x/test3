@@ -1,0 +1,17 @@
+.root {
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 0 00;
+
+    &__buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+}

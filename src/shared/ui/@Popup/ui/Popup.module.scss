@@ -1,0 +1,74 @@
+.root {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out;
+  transition-duration: 300ms;
+
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+  &__open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    max-width: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all;
+    transition-duration: 300ms;
+    scale: 0.3;
+
+    &__title {
+      top: 11px;
+      position: absolute;
+      color: #4f0d08;
+    }
+
+    &__children {
+      text-align: center;
+      font-size: 13px;
+      padding: 0 20px;
+      top: 80px;
+      position: absolute;
+      color: #000;
+    }
+
+    &__closeBtn {
+      position: absolute;
+      top: -20px;
+      right: -25px;
+    }
+
+    &__open {
+      scale: 1;
+    }
+  }
+  @media (max-width: 350px) {
+    &__content {
+      width: 95%;
+
+      &__title {
+        top: 7px;
+      }
+
+      &__children {
+        top: 70px;
+        padding: 0 15px;
+        font-size: 12px;
+      }
+    }
+  }
+}
